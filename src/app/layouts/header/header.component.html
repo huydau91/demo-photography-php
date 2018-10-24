@@ -1,0 +1,69 @@
+<div class="header">
+   <div class="container-fluid main-menu text-center clearfix py-2">
+      <div class="navbar-links d-none d-md-inline-block">
+        <div class="d-inline-block menu-item">
+            <a routerLink="" class="d-inline-block menu-link px-4 py-2">Trang chủ</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a routerLink="" class="d-inline-block menu-link px-4 py-2">Gói chụp</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a routerLink="" class="d-inline-block menu-link px-4 py-2">Phụ kiện</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a routerLink="" class="d-inline-block menu-link px-4 py-2">Thư viện ảnh</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a routerLink="" class="d-inline-block menu-link px-4 py-2">Liên hệ</a>
+        </div>
+      </div>
+      <div class="social-menu d-none d-md-inline-block float-left">
+          <a routerLink="" class="social-item d-inline-block px-2">
+              <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
+          </a>
+          <a routerLink="" class="social-item d-inline-block px-2">
+              <fa-icon [icon]="['fab', 'flickr']"></fa-icon>
+          </a>
+          <a routerLink="" class="social-item d-inline-block px-2">
+              <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+          </a>
+      </div>
+      <div class="action-sidebar d-inline-block px-2 float-right" (click)="openSideBar()">
+          <fa-icon [icon]="['fas', 'bars']" size="lg"></fa-icon>
+      </div>
+  </div> 
+  <div class="container-fluid header-sticky text-center clearfix py-2">
+      <div class="navbar-links d-none d-md-inline-block">
+        <div class="d-inline-block menu-item">
+            <a [routerLink]="['/home']" [routerLinkActive]="['is-active']" class="d-inline-block menu-link px-4 py-2">Trang chủ</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a [routerLink]="['/price-package']" [routerLinkActive]="['is-active']" class="d-inline-block menu-link px-4 py-2">Gói chụp</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a [routerLink]="['/assessories']" [routerLinkActive]="['is-active']" class="d-inline-block menu-link px-4 py-2">Phụ kiện</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a [routerLink]="['/album-list']" [routerLinkActive]="['is-active']" class="d-inline-block menu-link px-4 py-2">Thư viện ảnh</a>
+        </div>
+        <div class="d-inline-block menu-item">
+            <a [routerLink]="['/contact']" [routerLinkActive]="['is-active']" class="d-inline-block menu-link px-4 py-2">Liên hệ</a>
+        </div>
+      </div>
+      <div class="social-menu d-none d-md-inline-block float-left">
+          <a routerLink="" class="social-item d-inline-block px-2">
+              <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
+          </a>
+          <a routerLink="" class="social-item d-inline-block px-2">
+              <fa-icon [icon]="['fab', 'flickr']"></fa-icon>
+          </a>
+          <a routerLink="" class="social-item d-inline-block px-2">
+              <fa-icon [icon]="['fab', 'instagram']"></fa-icon>
+          </a>
+      </div>
+      <div class="action-sidebar d-inline-block px-2 float-right" (click)="openSideBar()">
+          <fa-icon [icon]="['fas', 'bars']" size="lg"></fa-icon>
+      </div>
+  </div>
+</div>
+<app-sidebar [sideBarTus]="sideBarTus" (changeTus)="getChange($event)"></app-sidebar>

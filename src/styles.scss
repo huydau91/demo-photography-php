@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/sass/variable';
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('assets/fonts/Pacifico-Regular.ttf');
+}
+@font-face {
+    font-family: 'Yanone';
+    src: url('assets/fonts/YanoneKaffeesatz-Regular.ttf');
+}
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Pacifico', 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}

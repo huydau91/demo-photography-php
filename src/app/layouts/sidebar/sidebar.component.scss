@@ -1,0 +1,85 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1072;
+    overflow: hidden;
+    outline: 0;
+    &.fade {
+        opacity: 0;
+        transition: opacity 1s linear;
+        &.show {
+            opacity: 1;
+            .sidebar-overlay {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .sidebar-content {
+            width: 415px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: block;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            z-index: 9999;
+            -webkit-transform: translateX(0, 437px);
+            -ms-transform: translateX(0, 437px);
+            transform: translateX(0, 437px);
+            -webkit-transition: visibility 1ms linear 1.5s,-webkit-transform 1.5s ease;
+            transition: visibility 1ms linear 1.5s,-webkit-transform 1.5s ease;
+            -webkit-transition: visibility 1ms linear 1.5s,-webkit-transform 1.5s ease;
+            transition: visibility 1ms linear 1.5s,-webkit-transform 1.5s ease;
+            -o-transition: transform 1.5s ease,visibility 1ms linear 1.5s;
+            transition: transform 1.5s ease,visibility 1ms linear 1.5s;
+            transition: transform 1.5s ease,visibility 1ms linear 1.5s,-webkit-transform 1.5s ease;
+            transition: transform 1.5s ease,visibility 1ms linear 1.5s,-webkit-transform 1.5s ease;
+            background: #ffffff;
+        }
+    }
+
+    .sidebar-overlay {
+        width: 100%;
+        height: 100%;
+        height: -webkit-calc(160%);
+        height: calc(160%);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9998;
+        content: '';
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        // -webkit-transition: opacity .15s ease-in-out;
+        // -moz-transition: opacity .15s ease-in-out;
+        // -ms-transition: opacity .15s ease-in-out;
+        // -o-transition: opacity .15s ease-in-out;
+        // transition: opacity .15s ease-in-out;
+        background: rgba(0,0,0,0.8);
+    }
+    .sidebar-close-icon, .social-thumb {
+        cursor: pointer;
+    }
+    .social-title {
+        font-family: 'Yanone';
+    }
+    .social-thumb {
+        object-fit: cover;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sidebar{
+        &.sidebar-open {
+            .sidebar-content {
+                width: 100%;
+            }
+        }
+    }
+}

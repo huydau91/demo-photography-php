@@ -1,0 +1,43 @@
+$background: rgb(43, 0, 197);
+
+.action-sidebar {
+    cursor: pointer;
+}
+.social-item {
+    color: #333333;
+    &:hover {
+        @extend %social-icon-hover;
+    }
+}
+.menu-item {
+    .menu-link {
+        color: #333333;
+        text-decoration: none;
+        cursor: pointer;
+        &.is-active {
+            border-bottom: 1px solid #333333;
+        }
+    }
+    &:hover {
+        background-color: rgba(211, 211, 211, .4);
+        border-radius: 5px;
+    }
+}
+.header-sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(51,51,51,0.1);
+}
+.show {
+    display: block;
+}
+
+%social-icon-hover {
+    border-radius: 100%;
+    color: $background; // IE8
+    fill: $background;
+    transform: scale(1.25, 1.25);
+    transition: background-color .5s, transform .25s ease-out;
+}

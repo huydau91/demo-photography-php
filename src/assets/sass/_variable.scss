@@ -1,0 +1,20 @@
+.sidebar-shadow {
+    overflow: hidden;
+}
+.markup-page {
+    position: relative;
+    padding-top: 50px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 30px;
+        left: 50%;
+        margin-left: -.5px;
+        top: 0;
+        background: rgba(51,51,51,0.25);
+    }
+}

@@ -1,0 +1,21 @@
+@for $i from 1 through 100 {
+    .w-#{$i} {
+        width: $i*1%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    @for $i from 1 through 100 {
+        .w-md-#{$i} {
+            width: $i*1%;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    @for $i from 1 through 100 {
+        .w-xl-#{$i} {
+            width: $i*1%;
+        }
+    }
+}

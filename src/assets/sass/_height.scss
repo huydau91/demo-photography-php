@@ -1,0 +1,19 @@
+@for $i from 1 through 100 {
+    .h-#{$i} {
+        height: $i*1%;
+    }
+}
+@media screen and (min-width: 768px) {
+    @for $i from 1 through 100 {
+        .h-md-#{$i} {
+            height: $i*1%;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    @for $i from 1 through 100 {
+        .h-xl-#{$i} {
+            height: $i*1%;
+        }
+    }
+}
